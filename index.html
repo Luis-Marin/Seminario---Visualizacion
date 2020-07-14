@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Visualización de datos del Titanic</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: black;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">Delitos en España (2013-2018) </h1>
+    <h4 class="main-autor">Nombre: Luis Marín Hinestrosa</h3>
+    <h4 class="main-url">Url: <a href="https://js-8nnw6u.stackblitz.io/">https://js-8nnw6u.stackblitz.io/</a></h3>
+    <h4 class="main-fuente">Fuentes: <br>
+    
+    <h4 class="fuente1">INE - Estadística de condenados: Adultos <br><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176793&menu=ultiDatos&idp=1254735573206">https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176793&menu=ultiDatos&idp=1254735573206</a>
+
+    <br>
+    <br>
+
+   <h4 class="fuente1">INE - Estadística de condenados: Menores <br>
+   <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176795&menu=ultiDatos&idp=1254735573206">https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176795&menu=ultiDatos&idp=1254735573206</a></h3>
+    <h4 class="main-fecha">Fecha: 12/07/2020</h4>
+    <br>
+          
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Introducción</h2>
+        <div class="text">
+
+      Este trabajo pretende analizar las personas condenadas en España entre los años 2013 y 2018. Se pretende estudiar si la inmigración trae consigo un aumento de delitos, si hay el género influye en la delicuencia o cómo han evolucionado los delitos en España en los últimos años.
+        <br>
+        <br>
+
+      El trabajo no cuenta una historia, si no que describe y presenta unos datos de forma explicativa e intenta extraer unas conclusiones basadas en datos reales y no en conjeturas o ideas preconcebidas.
+        <br>
+        <br>
+            <div class="metadato" >
+              La audiencia de este trabajo son los españoles interesados en conocer que tipo de delitos se cometen en su país y que características tienen los delincuentes. </div>
+              <br>
+              <br>              
+              <div class="metadato" >Este trabajo está preparado para una audiencia mayor de edad y en especial para el profesor y los alumnos de la asignatura Visualización del Máster de Big Data y Data Análisis de la Universidad Internacional de Valencia. 
+            </div>
+
+          </br>
+
+    </div>
+    </div>
+    <!-- add data visualization -->
+    <div class="plot">
+        <!-- First - column chart -->
+        <h2 class="plot-title">Condenados en España según su Nacionalidad</h2>
+        <div class="text">
+          He elegido un gráfico de barras para comparar la cantidad de condenados según su procedencia. Este gráfico es el más adecuado para comparar valores. El color es, además, una buena manera de representar datos categóricos, como la Nacionalidad.  <br> <br>
+
+          Se han utilizado las herramientas Datawrapper y Tableau desktop, ya que Tableau desktop ofrece más opciones y facilidad a la hora de crear gráficos de barras agrupadas.
+
+    </div>
+        
+    <iframe title="Adultos condenados en España en 2018" aria-label="chart" id="datawrapper-chart-pgo3t" src="https://datawrapper.dwcdn.net/pgo3t/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="500"></iframe>
+
+    <a href="https://ibb.co/PhS26VF"><img src="https://i.ibb.co/gTn0Rcm/Menores-Condenados-en-Espa-a-2018.png" alt="Menores-Condenados-en-Espa-a-2018" border="0"></a>
+
+    </br>
+    </br>
+
+   <div class="plot">
+        <!-- Second - line chart -->
+        <h2 class="plot-title">Evolución Temporal de Condenados en España</h2>
+        <div class="text">
+          Para ver la variación de condenados en función de los años, he utilizado un gráfico de líneas que es muy adecuado para mostrar temporalidad o cambios de una misma variable en función del tiempo.  <br> <br>
+
+          He utilizado la herramienta Datawrapper, que es sencilla y proporciona gráficos en línea de buena calidad.
+
+        </div>
+
+    <iframe title="Total de adultos condenados en España" aria-label="Interactive line chart" id="datawrapper-chart-Pj9rZ" src="https://datawrapper.dwcdn.net/Pj9rZ/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="500"></iframe>
+
+    <iframe title="Total de menores condenados en España" aria-label="Interactive line chart" id="datawrapper-chart-VClPF" src="https://datawrapper.dwcdn.net/VClPF/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="500"></iframe>
+
+     </br>
+     </br>
+
+      <div class="text">
+          Notese que los gráficos tienen diferente escala en el Eje Y, y que la escala de menores se ha aumentado para poder ver la variación en función de los años. Como se puede deducir fácilmente, el número de adultos condenados es mucho mayor que de menores, ya que el rango de edad es mayor y la cantidad de adultos en España también.      
+      </div>
+
+     </br>
+
+   <div class="plot">
+        <!-- Third - stacked columns -->
+        <h2 class="plot-title">Condenados en España en función de su Sexo</h2>
+        <div class="text">
+         Para mostrar la totalidad de condenados y condenadas, he decidido utilizar un gráfico de barras apiladas. Con este gráfico pretendo mostrar cómo han variado la totalidad de delitos a lo largo de los años, y mostrar el porcentaje aproximado de condenas de hombres y mujeres.  <br> <br>
+
+         Las barras apiladas no son el mejor gráfico para comparar los segmentos de las barras, pero sí ofrecen una buena comparación de los totales de las barras.  <br> <br>
+
+         He utilizado la herramienta de Google Sheet, que es también muy sencilla y proporciona gráficos en línea que se actualizan cuando la hoja de Google Sheet es actualizada.
+   </div>
+
+   <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYFbWpvcvNxpo2Y4ji2clX4ESTdmgpNVV5kL91ilz87GAI5BA_rvpflS_k8tfztTGnFQjiwEST1gC6/pubchart?oid=1720876995&amp;format=interactive"></iframe>
+
+   <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpG8K_ROrX2yNCpROy9vIJc20SqMXDWMUiZpD_ciQ8nwayRQmKRNLNc6nBN9z282rylvNaTTlaQKeP/pubchart?oid=924541867&amp;format=interactive"></iframe>
+
+   <div class="text">
+          Notese que los gráficos tienen diferente escala en el Eje Y, y que la escala de menores se ha aumentado para poder ver la variación en función de los años.    
+      </div>
+
+          </br>
+
+                 </br>
+
+   <div class="plot">
+        <!-- Fourth - Gráfico de Burbujas -->
+        <h2 class="plot-title">Menores Condenados en España según el número de infracciones penales</h2>
+        <div class="text">
+         El gráfico que presento a continuación es una variación entre un mapa de calor y un gráfico de burbujas. Este gráfico pretende representar 4 variables al mismo tiempo: La cantidad de delitos efectuados en España, el año, la edad de los condenados y el número de infracciones penales que cada uno de ellos cometió.  <br> <br>
+
+         Para ello, he representado el año y edad de los condenados a lo largo de los ejes X e Y. El tamaño de la circunferencia indica si los delincuentes cometieron 1, 2, 3 o más infracciones penales y el color la cantidad de delitos llevados a cabo por menores con estas características. <br> <br>
+
+         Mayor tamaño indica mayor número de infracciones penales cometidas por el demandado y más oscuridad indica una mayor concentración de delitos.<br> <br>
+
+         El color y el tamaño son dos maneras útiles de añadir variables a los gráficos. El tamalo se utiliza con variables cuantitativas y el color puede utilizarse para variables cuantitativas o cualitativas.  <br> <br>
+
+         He utilizado la herramienta Tableau, que permite hacer gráficos de mayor complejidad que Datawrapper o Google sheets.
+   </div>
+
+ <br>
+
+    <a href="https://ibb.co/hX19xNh"><img src="https://i.ibb.co/6vJwcSV/Menores-Condenados-en-Espa-a-Grafico-de-Temperatura.jpg" alt="Menores-Condenados-en-Espa-a-Grafico-de-Temperatura" border="0"></a>
+
+<br><br>
+
+   <div class="plot">
+        <!-- Fifth - Pie Chart -->
+        <h2 class="plot-title">Tipos de Delitos en España. Adultos Condenados</h2>
+        <div class="text">
+         He utilizado un gráfico de tarta para ver que delitos son los más comunes en España, en función de la base de datos de Adultos condenados. Con esta representación se pretende ver la composición de todos los delitos españoles, y que delitos predominan sobre otros.  <br> <br>
+
+         Este gráfico podría incluir un filtro para ver la distribución de delitos por año, o alguna animación que muestre temporalidad. Sin embargo, la sencillez de los programas utilizados, hace que no oferten estas funcionalidades. <br> <br>
+
+         Los gráficos de tarta o de anillo son un buen recurso para mostrar proporciones y distribución de un todo, aunque no son especialmente buenos si se buca representar proporcones precisas.  <br> <br>
+
+         He utilizado la herramienta de Google Sheet, que es sencilla, aunque no oferte funcionalidades especiales como filtros interactivos en línea.
+   </div>
+
+   <iframe width="349" height="380.57469696809017" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNLw3IaiS47uax5m3VdL3cPVprLBGjHjKqFYXE-3RxBXlhDgW21aYJB_nVuTtJQYs_y4DsiY_fs5io/pubchart?oid=194005928&amp;format=interactive"></iframe>
+
+   <iframe width="343.1418613694558" height="380.57469696809017" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNLw3IaiS47uax5m3VdL3cPVprLBGjHjKqFYXE-3RxBXlhDgW21aYJB_nVuTtJQYs_y4DsiY_fs5io/pubchart?oid=511002892&amp;format=interactive"></iframe>
+
+   <iframe width="519.4242687768631" height="380.57469696809017" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNLw3IaiS47uax5m3VdL3cPVprLBGjHjKqFYXE-3RxBXlhDgW21aYJB_nVuTtJQYs_y4DsiY_fs5io/pubchart?oid=743605291&amp;format=interactive"></iframe>
+
+   <iframe width="349" height="380.57469696809017" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNLw3IaiS47uax5m3VdL3cPVprLBGjHjKqFYXE-3RxBXlhDgW21aYJB_nVuTtJQYs_y4DsiY_fs5io/pubchart?oid=1807408686&amp;format=interactive"></iframe>
+
+   <iframe width="343.1418613694558" height="380.57469696809017" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNLw3IaiS47uax5m3VdL3cPVprLBGjHjKqFYXE-3RxBXlhDgW21aYJB_nVuTtJQYs_y4DsiY_fs5io/pubchart?oid=257412851&amp;format=interactive"></iframe>
+  
+   <iframe width="519.4242687768632" height="380.57469696809017" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSNLw3IaiS47uax5m3VdL3cPVprLBGjHjKqFYXE-3RxBXlhDgW21aYJB_nVuTtJQYs_y4DsiY_fs5io/pubchart?oid=1057702931&amp;format=interactive"></iframe>
+
+    <h2 class="plot-title">Tipos de Delitos en España. Menores Condenados</h2>
+
+    <iframe width="357.4" height="380.11416184971097" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAUM7apTnDbZa4meGjTdfSIgzvtd9TX2yNRYJked47b3QuGVMVP1YsbejBq9DvWO1ZSe-nyF0ibbc5/pubchart?oid=411439234&amp;format=interactive"></iframe>
+
+    <iframe width="357.4" height="380.11416184971097" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAUM7apTnDbZa4meGjTdfSIgzvtd9TX2yNRYJked47b3QuGVMVP1YsbejBq9DvWO1ZSe-nyF0ibbc5/pubchart?oid=507423121&amp;format=interactive"></iframe>
+
+    <iframe width="531.5000000000001" height="380.11416184971097" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAUM7apTnDbZa4meGjTdfSIgzvtd9TX2yNRYJked47b3QuGVMVP1YsbejBq9DvWO1ZSe-nyF0ibbc5/pubchart?oid=593385696&amp;format=interactive"></iframe>
+
+    <iframe width="357.4" height="380.114161849711" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAUM7apTnDbZa4meGjTdfSIgzvtd9TX2yNRYJked47b3QuGVMVP1YsbejBq9DvWO1ZSe-nyF0ibbc5/pubchart?oid=1860390605&amp;format=interactive"></iframe>
+
+    <iframe width="357.4" height="380.11416184971114" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAUM7apTnDbZa4meGjTdfSIgzvtd9TX2yNRYJked47b3QuGVMVP1YsbejBq9DvWO1ZSe-nyF0ibbc5/pubchart?oid=1890254525&amp;format=interactive"></iframe>
+
+    <iframe width="532.5" height="380.1141618497111" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAUM7apTnDbZa4meGjTdfSIgzvtd9TX2yNRYJked47b3QuGVMVP1YsbejBq9DvWO1ZSe-nyF0ibbc5/pubchart?oid=817081945&amp;format=interactive"></iframe>
+
+     <div class="plot">
+        <!-- Conclusión -->
+        <h2 class="text-title">Conclusión</h2>
+        <div class="text">
+         A raíz de este estudio y estos gráficos se concluye:
+          <br> <br> - Un gran porcentaje de los condenados en España en 2018 fué de Nacionalidad Española. La mayor fuente de delincuentes españoles está en España, teniendo en cuenta tanto Adultos condenados como Menores de edad condenados.
+
+          <br> <br> - El número de Adultos condenados por año se ha vsto incrementado en los últimos 6 años llegando a superar los 400,000 condenados en 2018. Sin embrago, el número de Menores condenados ha decrecido sutílmente en los últimos años, situándose por encima de 13,500.
+
+          <br> <br> - Tanto en Adultos como en Menores se ve una clara diferecia entre condenados y condenadas, siendo el número de condenados varones muy superior al de condenadas.
+
+          <br> <br> - En relación a los menores de edad, el mayor porcentaje de delitos se comete por delincuentes mayores (16 o 176 años) y con pocas infracciones penales.
+
+          <br> <br> - Por último, el tipo de delito mças cometido es similar entre adultos y menores, siendo los más frecuentes delitos contra el patrimonio y el orden socioecómico. El delito de lesiones también es frecuente entre ambos grupos.
+
+          <br> <br> - En los últimos años ha habido una reducción del porcentaje de delitos contra la seguridad colectiva entre los condenados adultos pero un llamativo incremento en el porcentaje de delitos de lesiones y contra la libertad del sector más joven.
+   </div>
